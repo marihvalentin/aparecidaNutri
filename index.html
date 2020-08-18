@@ -7,9 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
-		<script>
-			console.log("Hello World");
-		</script>
 	</head>
 	<body>
 
@@ -75,6 +72,14 @@
 
 			</section>
 		</main>
+
+		<script>
+			var titulo = document.querySelector("h1");
+			console.log(titulo);
+			console.log(titulo.textContent);
+
+			titulo.textContent = "Aparecida Nutri";
+		</script>
 
 	</body>
 </html>
