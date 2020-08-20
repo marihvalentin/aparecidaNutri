@@ -1,0 +1,79 @@
+[AULA 1]
+
+Apesar deste capítulo inicial ter sido curto, aprendemos pontos importantes como:
+
+    > Separar a organização de nosso código em arquivos .js
+    > Importar arquivos .js sempre ao final do body
+    > A representação do HTML pela variável document
+    > A função que faz busca querySelector()
+    > Preferir selecionar por #id ou .classe
+
+
+Saber identificar e interpretar os erros do console é uma habilidade de todo bom desenvolvedor Javascript.
+
+Se desejamos que uma mensagem seja exibida no console, devemos sempre chamar a função console.log(), que é a função 
+que recebe como parâmetro o conteúdo da mensagem que queremos exibir no console.
+
+vamos conhecer o DOM (Document Object Model), representação do HTML para o nosso JavaScript, acessível por uma palava do JavaScript chamada document.
+
+No console do navegador, quando digitamos document e pressionamos "ENTER" em seguida, veremos tudo o que está na página HTML. O document será a 
+ponte entre o JavaScript e o HTML, e tudo que for alterado nele será alterado na exibição para o usuário.
+
+Abordamos vários temas sobre a linguagem JavaScript, vimos que ela ganhou relevância por estar sendo usada de diferentes formas, no navegador, 
+banco de dados, placas Arduíno. É importante que desenvolvedores tenham, pelo menos, um conhecimento básico de como funciona a linguagem.
+
+Vimos algumas funções como console() e alert(), que nos permitem exibir mensagens ao usuário, e conhecemos a utilidade do console de desenvolvedor, 
+presente nos navegadores. Podemos executar códigos JavaScript no console, com isso, conseguimos testar algumas coisas diretamente no navegador.
+
+Vimos também como realizar a busca por algum elemento do HTML, no código JavaScript. Para isto, utilizamos a variável document, que contém todo o 
+conteúdo HTML da página. Quando manipulamos o document, conseguimos manipular o que será exibido ao usuário. Essa manipulação foi realizada por meio 
+da seleção de trechos da tela, feita com o querySelector(). Vimos que este método busca por nome de tags - o que pode trazer problemas -, assim 
+como seletores de CSS.
+
+O console do desenvolvedor é uma ferramenta muito poderosa e versátil para o desenvolvedor Javascript. Com ele conseguimos rapidamente ser 
+notificados de possíveis erros em nosso código, podemos executar funções, observar a saída de algumas funções e executar pequenos testes das 
+funcionalidades do Javascript de modo rápido.
+
+É uma boa prática sempre que estivermos testando nosso site ficar com o console aberto, para ficar monitorando possíveis erros em nosso código.
+
+Como utilizar o console é algo bastante corriqueiro, podemos nos aproveitar dos atalhos CTRL + SHIFT + J (Win/Linux) ou CMD + ALT + J 
+(Google Chrome no Mac. No Safari, o atalho é CONTROL + ALT + C, com o menu "Develop" ativado) para ter acesso ao console de modo rápido.
+
+Sabemos que é importante fazer a separação de mundos HTML e Javascript, por isso criamos arquivos externos para guardar nosso código. 
+Só que ao separar o Javascript em um arquivo externo, precisamos lembrar de importa-lo no HTML e para isso precisamos utilizar a tag <script> assim:
+
+'	<script src="contador.js"></script>
+
+
+
+O document é uma variável muito importante do Javascript. Ela contém o DOM ou Document Object Model, que é como o navegador enxerga o HTML 
+utilizado por ele para renderizar a página.
+
+O navegador, ao ler o seu arquivo HTML, cria uma cópia em memória daquele HTML e a partir dessa cópia ele vai desenhando a sua página, colocando 
+as tags e aplicando os estilos. Esta cópia é o que chamamos de DOM uma representação em memória do HTML do seu arquivo, que o navegador usa 
+para desenhar a página, e a variável document é quem contêm o DOM.
+
+Por isso, quando dizemos que com o Javascript nós estamos manipulando o DOM, estamos manipulando o que o navegador renderizou. Então ao trocar 
+algum texto do DOM, o navegador imediatamente desenha novamente aquele texto, pois o DOM é o que o navegador usa para desenhar o seu site.
+
+Outra caracteristica interessante, é que como manipulamos o DOM , quando trocamos um texto de um <h1> ou um estilo de um elemento, na verdade 
+estamos alterando a representação em memória , o que faz com que o arquivo fonte que contêm seu HTML fique intacto!
+
+Quando desejamos pegar apenas parte do HTML, devemos utilizar a função querySelector(). A função querySelector faz a busca através de 
+seletores CSS para trazer o HTML que você está interessado. Por exemplo, no caso abaixo:
+
+'	<h1 class="titulo"> Meu primeiro site</h1>
+
+
+Podemos buscar este <h1> passando o seletor CSS correto para a função querySelector. Utilizando o seletor de tag, podemos buscar assim:
+
+'	document.querySelector("h1");
+
+E utilizando um seletor CSS de classe, ficaria assim:
+
+'	document.querySelector(".titulo");
+
+Neste caso, ambas as funções retornariam o h1. Ter domínio dos seletores CSS é importante se você deseja trabalhar bem com o Javascript!
+
+
+
