@@ -3,6 +3,9 @@ var tabela = document.querySelector("table");
 tabela.addEventListener("dblclick", function(event) {
   var alvoEvento = event.target;
   var paiDoAlvo = alvoEvento.parentNode; //TR= paciente = remover
-  paiDoAlvo.remove();
-  //ou apenas event.target.parentNode.remove();
+  event.target.parentNode.classList.add("fadeOut");
+
+  setTimeout(function () {
+    paiDoAlvo.remove();
+  },500);
 });
